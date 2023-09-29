@@ -1,31 +1,19 @@
 <template>
-  <div class="std">
-    <h2>Student List</h2>
-    <div class="std-stat">
-      <div class="std-title">
-        <h3>Id</h3>
-        <h3>First</h3>
-        <h3>Last</h3>
-        <h3>Email</h3>
-        <h3>Status</h3>
-        <h3>Win</h3>
-        <h3>Lose</h3>
-        <h3>Draw</h3>
-        <h3>Rank</h3>
-      </div>
+  <div class="lead">
+    <h2>Leader Board</h2>
+    <div class="lead-stat">
       <ul>
-        <div v-for="item in student" v-bind:key="item.id" class="std-cont">
-          <li class="std-cls">
-            <div class="std-list">
-              <h4>{{ item.id }}</h4>
+        <div class="title">
+          <h3>First</h3>
+          <h3>Last</h3>
+          <h3>Email</h3>
+        </div>
+        <div v-for="item in list" v-bind:key="item.id" class="li-cont">
+          <li class="li-cls">
+            <div class="list">
               <h4>{{ item.first_name }}</h4>
               <h4>{{ item.last_name }}</h4>
               <h4>{{ item.email }}</h4>
-              <h4>{{ item.status }}</h4>
-              <h4>{{ item.win }}</h4>
-              <h4>{{ item.lose }}</h4>
-              <h4>{{ item.draw }}</h4>
-              <h4>{{ item.rank }}</h4>
             </div>
           </li>
         </div>
@@ -36,44 +24,40 @@
 
 <script lang="ts">
 import Vue from "vue";
-import axios, { AxiosResponse } from "axios";
+import axios, { AxiosResponse } from "axios"; 
 import { defineComponent } from "vue";
 
-interface Students {
+interface Employee {
   id: number;
   first_name: string;
   last_name: string;
   email: string;
-  status: string;
-  win: number;
-  lose: number;
-  draw: number;
-  rank: number;
 }
 
 export default defineComponent({
-  name: "StudentList",
+  name: "EmployeeList",
   data() {
     return {
-      student: [] as Students[],
+      list: [] as Employee[] 
     };
   },
   mounted() {
     axios
       .get("http://localhost:3000/users")
-      .then((resp: AxiosResponse<{ data: Students[] }>) => {
-        console.warn("Response:", resp.data);
-        this.student = resp.data.data;
-        console.warn("Student:", this.student);
+      .then((resp: AxiosResponse<{ data: Employee[] }>) => {
+        this.list = resp.data.data;
+        console.warn(this.list);
       })
       .catch((error) => {
         console.error("Error fetching employee data:", error);
       });
-  },
+  }
 });
 </script>
+
+
 <style scoped>
-.std {
+.lead {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -86,13 +70,13 @@ export default defineComponent({
   color: white;
 }
 
-.std-stat {
+.lead-stat {
   padding: 0;
   width: 100%;
   margin: 0;
   text-align: center;
 }
-.std-title {
+.title {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -104,7 +88,7 @@ export default defineComponent({
   padding-left: 10px;
   border-radius: 5px;
 }
-.std-list {
+.list {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -117,7 +101,7 @@ export default defineComponent({
   padding-left: 10px;
   border-radius: 5px;
 }
-.std-cls {
+.li-cls {
   list-style-type: none;
 }
 
@@ -132,8 +116,8 @@ export default defineComponent({
   margin: 0;
 }
 @media screen and (max-width: 768px) {
-  .std-title,
-  .std-list {
+  .title,
+  .list {
     flex-direction: column;
   }
 }
