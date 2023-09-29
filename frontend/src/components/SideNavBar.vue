@@ -21,6 +21,16 @@
           ><img src="@/assets/friends.svg" alt="Friends"
         /></router-link>
       </li>
+      <li>
+        <router-link to="/list"
+          ><img src="@/assets/friends.svg" alt="List"
+        /></router-link>
+      </li>
+      <li>
+        <router-link to="/student"
+          ><img src="@/assets/friends.svg" alt="List"
+        /></router-link>
+      </li>
     </ul>
   </aside>
 </template>
@@ -45,7 +55,7 @@
 }
 
 .side-nav-links li a {
-  color: #fff;  
+  color: #fff;
   text-decoration: none;
 }
 

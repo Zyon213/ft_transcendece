@@ -8,4 +8,12 @@ export interface UserI {
 	email: string
 	
 	status: string
+	
+	win: number
+
+	lose: number
+
+	draw: number
+
+	rank: number
 }

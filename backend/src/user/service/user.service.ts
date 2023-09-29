@@ -31,7 +31,7 @@ export class UserService {
 	  }
 	  
 
-	delete(id: number): Observable<UserI>{
-		return  from(this.userRepository.delete(id))
+	async delete(id: number): Promise<void>{
+	  await from(this.userRepository.delete(id))
 	}
 }

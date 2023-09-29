@@ -17,4 +17,15 @@ export class UserEntity {
 	@Column()
 	status: string
 
+	@Column()
+	win: number
+
+	@Column()
+	lose: number
+
+	@Column()
+	draw: number
+
+	@Column()
+	rank: number
 }
