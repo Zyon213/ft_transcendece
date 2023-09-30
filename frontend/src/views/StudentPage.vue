@@ -61,13 +61,11 @@ export default defineComponent({
   mounted() {
     axios
       .get("http://localhost:3000/users")
-      .then((resp: AxiosResponse<{ data: Students[] }>) => {
-        console.warn("Response:", resp.data);
-        this.student = resp.data.data;
-        console.warn("Student:", this.student);
+      .then((resp: AxiosResponse<Students[]>) => {
+        this.student = resp.data;
       })
       .catch((error) => {
-        console.error("Error fetching employee data:", error);
+        console.error("Error fetching student data:", error);
       });
   },
 });
@@ -106,7 +104,7 @@ export default defineComponent({
 }
 .std-list {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   background: #34373d;
   width: 98%;
@@ -117,6 +115,7 @@ export default defineComponent({
   padding-left: 10px;
   border-radius: 5px;
 }
+
 .std-cls {
   list-style-type: none;
 }

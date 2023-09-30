@@ -22,11 +22,6 @@
         /></router-link>
       </li>
       <li>
-        <router-link to="/list"
-          ><img src="@/assets/friends.svg" alt="List"
-        /></router-link>
-      </li>
-      <li>
         <router-link to="/student"
           ><img src="@/assets/friends.svg" alt="List"
         /></router-link>
