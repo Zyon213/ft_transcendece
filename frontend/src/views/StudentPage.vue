@@ -109,7 +109,7 @@ export default defineComponent({
   align-items: left;
   justify-content: space-between;
   background: #AE445A;
-  width: 98%;
+  width: 99%;
   margin-bottom: 5px;
   padding-top: 0;
   padding-bottom: 0;
