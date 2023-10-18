@@ -130,13 +130,14 @@ export default defineComponent({
   display: flex;
   flex-wrap: wrap; 
   justify-content: space-between;
-  background: #24272c;
+  background: linear-gradient(to right, #451952, #451952, #ae4188);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);  
   color: white;
   margin: 20px;
   border-radius: 5px;
   padding: 10px;
   width: 100%;
-  min-height: 100vh; 
+  height: 100%;
 }
 
 @media screen and (min-width: 768px) {
@@ -180,7 +181,8 @@ export default defineComponent({
   margin-top: 20px;
   width: 100%;
   height: 500px;
-  background: #34373d;
+  background: linear-gradient(to right, #AE445A,#662549);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);  
 }
 
 .chnul-cont {
@@ -258,7 +260,7 @@ export default defineComponent({
   margin-left: 10px;
   cursor: pointer;
   color: white;
-  background: #697692;
+  background: #451952;
   border: none;
 }
 .grpbtn:hover,
@@ -310,7 +312,9 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #61656e;
+  background: linear-gradient(to left, #AE4488, #F39F5A);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); 
+  /* background: #F39F5A; */
   margin: 3px;
   padding-left: 5px;
   padding-right: 5px;
@@ -318,7 +322,8 @@ export default defineComponent({
 }
 .cat-item {
 	display: flex;
-  background: #61656e;
+	background: linear-gradient(to left, #AE4488, #F39F5A);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5); 
   margin: 3px;
   padding-left: 10px;
   padding-top: 10px;

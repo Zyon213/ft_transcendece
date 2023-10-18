@@ -75,7 +75,8 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #24272c;
+  background: linear-gradient(to right, #451952, #451952, #ae4188);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);  
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
@@ -94,7 +95,8 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #34373d;
+  background: #AE445A;
+  /* background: #34373d; */
   margin-bottom: 5px;
   width: 98%;
   margin-bottom: 5px;
@@ -106,7 +108,7 @@ export default defineComponent({
   display: flex;
   align-items: left;
   justify-content: space-between;
-  background: #34373d;
+  background: #AE445A;
   width: 98%;
   margin-bottom: 5px;
   padding-top: 0;

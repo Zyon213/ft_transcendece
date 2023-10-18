@@ -113,11 +113,13 @@ export default defineComponent({
 
 <style scoped>
 .friend {
-  background: #24272c;
+	background: linear-gradient(to right, #451952, #451952, #ae4188);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);  
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
   width: 100%;
+  height: 100%;
   color: white;
 }
 
@@ -140,14 +142,15 @@ export default defineComponent({
   border-radius: 10px;
   margin: 0;
   margin-bottom: 5px;
-  background: #34373d;
+  background: #AE445A;
 }
 
 .frd-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #34373d;
+  background: #AE445A;
+  /* background: #34373d; */
   margin: 0;
   padding-top: 0;
   padding-bottom: 0;
@@ -194,7 +197,8 @@ export default defineComponent({
   margin-left: 10px;
   cursor: pointer;
   color: white;
-  background: #697692;
+  background: #451952;
+  /* background: #697692; */
   border: none;
 }
 .addbtn:hover,

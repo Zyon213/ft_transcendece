@@ -16,16 +16,17 @@ export default {
   components: {
     DropdownMenu,
   },
-  data (){
-	return {
-		username: "yoyohann",
-	}
-  }
+  data() {
+    return {
+      username: "yoyohann",
+    };
+  },
 };
 </script>
 <style scoped>
 .top-nav-bar {
-  background: #212327;
+  background: linear-gradient(to right, #662549, #451952);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   color: white;
   display: flex;
   justify-content: space-between;

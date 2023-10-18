@@ -82,7 +82,9 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: #24272c;
+  background: linear-gradient(to right, #451952, #451952, #ae4188);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
@@ -103,7 +105,8 @@ export default {
 }
 .left {
   display: flex;
-  background: #34373d;
+  background: linear-gradient(to right, #ae445a, #451952);
+  box-shadow: 4px 2px 0 rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   padding: 10px;
   width: 45%;
@@ -130,7 +133,8 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #34373d;
+  background: linear-gradient(to right, #ae445a, #451952);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   width: 45%;
   border-radius: 5px;
   padding: 10px;
@@ -139,7 +143,9 @@ export default {
 .stat {
   display: flex;
   align-items: center;
-  background: #5e6367;
+  background: #ae445a;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
   justify-content: space-between;
   margin-bottom: 5px;
   padding-left: 50px;
@@ -153,7 +159,9 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: #34373d;
+  background: linear-gradient(to right, #662549, #451952);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
   margin-top: 10px;
   border-radius: 5px;
   padding: 10px;
@@ -165,7 +173,10 @@ export default {
   text-align: center;
 }
 .history li {
-  background: #5e6367;
+  background: linear-gradient(to right, #662549, #ae445a);
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
   padding: 10px;
   margin: 5px;
   border-radius: 5px;

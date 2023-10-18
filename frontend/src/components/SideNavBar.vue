@@ -32,7 +32,8 @@
 
 <style scoped>
 .side-nav-bar {
-  background-color: #34373d;
+	background: linear-gradient(to top ,#AE445A,#451952);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
   color: #fff;
   width: 70px;
   height: 100vh;
