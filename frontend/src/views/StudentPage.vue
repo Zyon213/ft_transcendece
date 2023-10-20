@@ -3,33 +3,28 @@
     <h2>Student List</h2>
     <div class="std-stat">
       <div class="std-title">
-        <h3>Id</h3>
-        <h3>First</h3>
-        <h3>Last</h3>
-        <h3>Email</h3>
-        <h3>Status</h3>
-        <h3>Win</h3>
-        <h3>Lose</h3>
-        <h3>Draw</h3>
-        <h3>Rank</h3>
+        <div class="tit-list">Id</div>
+        <div class="tit-list">First</div>
+        <div class="tit-list">Last</div>
+        <div class="tit-list">Email</div>
+        <div class="tit-list">Status</div>
+        <div class="tit-list">Win</div>
+        <div class="tit-list">Lose</div>
+        <div class="tit-list">Draw</div>
+        <div class="tit-list">Rank</div>
       </div>
-      <ul>
-        <div v-for="item in student" v-bind:key="item.id" class="std-cont">
-          <li class="std-cls">
-            <div class="std-list">
-              <h4>{{ item.id }}</h4>
-              <h4>{{ item.first_name }}</h4>
-              <h4>{{ item.last_name }}</h4>
-              <h4>{{ item.email }}</h4>
-              <h4>{{ item.status }}</h4>
-              <h4>{{ item.win }}</h4>
-              <h4>{{ item.lose }}</h4>
-              <h4>{{ item.draw }}</h4>
-              <h4>{{ item.rank }}</h4>
-            </div>
-          </li>
-        </div>
-      </ul>
+
+      <div v-for="item in student" v-bind:key="item.id" class="std-list">
+        <div class="lst-item">{{ item.id }}</div>
+        <div class="lst-item">{{ item.first_name }}</div>
+        <div class="lst-item">{{ item.last_name }}</div>
+        <div class="lst-item">{{ item.email }}</div>
+        <div class="lst-item">{{ item.status }}</div>
+        <div class="lst-item">{{ item.win }}</div>
+        <div class="lst-item">{{ item.lose }}</div>
+        <div class="lst-item">{{ item.draw }}</div>
+        <div class="lst-item">{{ item.rank }}</div>
+      </div>
     </div>
   </div>
 </template>
@@ -76,7 +71,7 @@ export default defineComponent({
   flex-direction: column;
   align-items: center;
   background: linear-gradient(to right, #451952, #451952, #ae4188);
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);  
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
   margin: 20px;
   padding: 20px;
   border-radius: 5px;
@@ -91,12 +86,12 @@ export default defineComponent({
   margin: 0;
   text-align: center;
 }
+
 .std-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #AE445A;
-  /* background: #34373d; */
+  background: #ae445a;
   margin-bottom: 5px;
   width: 98%;
   margin-bottom: 5px;
@@ -104,12 +99,24 @@ export default defineComponent({
   padding-left: 10px;
   border-radius: 5px;
 }
+
+.tit-list {
+  display: inline;
+  font-size: 1.5rem;
+  color: black;
+  background: #ae445a;
+  margin-bottom: 5px;
+  width: 98%;
+  margin-bottom: 5px;
+  padding: 10px;
+}
 .std-list {
   display: flex;
   align-items: left;
+  font-size: 1rem;
   justify-content: space-between;
-  background: #AE445A;
-  width: 99%;
+  background: #ae445a;
+  width: 98%;
   margin-bottom: 5px;
   padding-top: 0;
   padding-bottom: 0;
@@ -118,20 +125,21 @@ export default defineComponent({
   border-radius: 5px;
 }
 
-.std-cls {
-  list-style-type: none;
+.lst-item {
+  display: inline;
+  align-items: right;
+  justify-content: right;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 10%;
 }
-
 .usr-img {
   width: 30px;
   border-radius: 50%;
   padding: 0;
   margin: 0;
 }
-.lst {
-  padding: 0;
-  margin: 0;
-}
+
 @media screen and (max-width: 768px) {
   .std-title,
   .std-list {
